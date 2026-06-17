@@ -40,10 +40,22 @@ public class BubbleSort {
 	        }
 	        }
 	
+	       static void SortInsertion(int[] arr) {
+	    	   for (int i=1;i<arr.length;i++) {
+	    		   int temp=arr[i];
+	    		   int j=i-1;
+	    		   for(j=i-1;j>=0 && arr[j]>temp;j--) {
+	    			   arr[j+1]=arr[j];
+	    		   }
+	    		   arr[j+1]=temp; 
+	    	   }
+	       }
+	
 	public static void main(String[] args) {
-		int[] arr= {34,44,22,45,643,22};
+		int[] arr= {5,3,4,1,2};
 		//SortBub(arr);
-		SortSelection(arr);
+		//SortSelection(arr);
+		SortInsertion(arr);
 		for (int i=0;i<arr.length;i++) {
 			System.out.print(arr[i]+" ");
 		}
