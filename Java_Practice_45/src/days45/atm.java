@@ -12,6 +12,7 @@ class customer extends atmTemplate{
     	balance =a;
     	AccNo=b;
     }
+    //test 
 	void withdraw(int a) {
 		balance = balance-a;
 		System.out.println("The withdrawn amount is "+a+"\nThe remaining Balance is "+balance);
