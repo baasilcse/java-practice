@@ -1,4 +1,4 @@
-package days45;
+package days45.linkedList;
 
 public class linkedList {
 	node first; //head
@@ -48,13 +48,51 @@ public class linkedList {
 			first=temp.next;
 			return;
 		}
-		while(temp!=null) {
+//		while(temp!=null) {
+//			if(temp.next.data==val) {
+//				temp.next=temp.next.next;
+//				break;
+//			}
+//			temp=temp.next;
+//		}
+		while(temp.data!=val && temp!=null) {
 			if(temp.next.data==val) {
 				temp.next=temp.next.next;
-				break;
+				return;
 			}
 			temp=temp.next;
 		}
+	}
+	
+	void deleteByPos(int pos){
+		node temp=first;
+		 if(pos==1) {
+			 deleteAtBegining();
+			 return;
+		 }
+		 for(int i=1;i<=pos-2;i++) {
+			 temp=temp.next;
+		 }
+		 temp.next=temp.next.next;
+	}
+	
+	void deleteAtEnd() {
+		node temp=first;
+		while(temp.next.next!=null) {
+			temp=temp.next;
+		}
+		temp.next=null;
+	}
+	  
+	void update(int pos,int val) {
+		node temp=first;
+		if(pos==1) {
+			temp.data=val;
+		}
+		for(int i=1;i<=pos-1;i++) {
+			temp=temp.next;
+		}
+		temp.data=val;
 	}
 	void display() {
 		node temp=first;

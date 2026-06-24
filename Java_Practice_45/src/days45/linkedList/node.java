@@ -1,4 +1,4 @@
-package days45;
+package days45.linkedList;
 
 public class node {
       int data;
