@@ -48,6 +48,8 @@ public class linkedList {
 			first=temp.next;
 			return;
 		}
+		
+		
 //		while(temp!=null) {
 //			if(temp.next.data==val) {
 //				temp.next=temp.next.next;
@@ -55,6 +57,8 @@ public class linkedList {
 //			}
 //			temp=temp.next;
 //		}
+		
+		
 		while(temp.data!=val && temp!=null) {
 			if(temp.next.data==val) {
 				temp.next=temp.next.next;
