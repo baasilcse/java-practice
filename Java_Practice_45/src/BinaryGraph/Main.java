@@ -7,7 +7,6 @@ public class Main {
 //	bt.insert(20);
 //	bt.insert(30);
 //	bt.displayPreorder(bt.root);
-		
    binarySearchTree bst=new binarySearchTree();
    bst.insert(10);
    bst.insert(5);

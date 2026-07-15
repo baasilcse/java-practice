@@ -2,7 +2,6 @@ package BinaryGraph;
 
 public class Binarytree {
 node root;
-
  Binarytree(){
 	 root=null;
  }
@@ -16,9 +15,6 @@ node root;
          root.right = new node(val);
      }
  }
-	
-	
-
 void displayPreorder(node root) {
      if(root==null) {
     	 return;
@@ -27,7 +23,6 @@ void displayPreorder(node root) {
      displayPreorder(root.left);
      displayPreorder(root.right);
 }
-
 void displayPostorder(node root) {
     if (root == null) {
         return;
@@ -35,6 +30,4 @@ void displayPostorder(node root) {
     displayPostorder(root.left);
     displayPostorder(root.right);
     System.out.print(root.data + " ");
-}
-
-}
+}}
